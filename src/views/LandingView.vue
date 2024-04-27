@@ -14,8 +14,8 @@
         This web already ready responsive on mobile,tablet, laptop,and desktop,
         already implement fetching api using axios, already implement state
         management using vuex, already implement seperate component, already
-        implement loading state, and last but not least is the router. and the
-        CSS using Tailwind
+        implement loading state, and the CSS using Tailwind, last but not least
+        is the router.
       </p>
       <ButtonPrimary
         @click="goToHome"

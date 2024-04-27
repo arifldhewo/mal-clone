@@ -5,15 +5,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  playAudio() {
-    const audio = document.getElementById("audio");
-    audio.play();
-  },
-};
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -36,7 +36,7 @@ export default new Vuex.Store({
       await axios
         .get("/top/anime", {
           baseURL:
-            "https://cors-anywhere.herokuapp.com/http://api.jikan.moe/v4",
+            "https://thingproxy.freeboard.io/fetch/http://api.jikan.moe/v4",
         })
         .then((res) => {
           commit("storeAniList", res.data.data);
@@ -49,7 +49,7 @@ export default new Vuex.Store({
       await axios
         .get(`${id}`, {
           baseURL:
-            "https://cors-anywhere.herokuapp.com/http://api.jikan.moe/v4",
+            "https://thingproxy.freeboard.io/fetch/http://api.jikan.moe/v4",
         })
         .then((res) => {
           commit("storeAniDetail", res.data.data);

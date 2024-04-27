@@ -35,8 +35,7 @@ export default new Vuex.Store({
     async triggerStoreAniList({ commit }) {
       await axios
         .get("/top/anime", {
-          baseURL:
-            "https://thingproxy.freeboard.io/fetch/http://api.jikan.moe/v4",
+          baseURL: "https://api.allorigins.win/raw?url=http://api.jikan.moe/v4",
         })
         .then((res) => {
           commit("storeAniList", res.data.data);
@@ -48,8 +47,7 @@ export default new Vuex.Store({
     async triggerStoreAniDetail({ commit }, id) {
       await axios
         .get(`${id}`, {
-          baseURL:
-            "https://thingproxy.freeboard.io/fetch/http://api.jikan.moe/v4",
+          baseURL: "https://api.allorigins.win/raw?url=http://api.jikan.moe/v4",
         })
         .then((res) => {
           commit("storeAniDetail", res.data.data);

@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     aniList: [],
     aniDetail: [],
+    isPlaying: false,
   },
   getters: {},
   mutations: {
@@ -22,6 +23,12 @@ export default new Vuex.Store({
     },
     deleteAniList(state) {
       state.aniList = [];
+    },
+    storeIsPlaying(state, result) {
+      state.isPlaying = result;
+    },
+    storeIsPausing(state, result) {
+      state.isPlaying = result;
     },
   },
   actions: {
@@ -56,6 +63,12 @@ export default new Vuex.Store({
     },
     triggerDeleteAniList({ commit }) {
       commit("deleteAniList");
+    },
+    triggerPlayingAudio({ commit }, result) {
+      commit("storeIsPlaying", result);
+    },
+    triggerPausingAudio({ commit }, result) {
+      commit("storeIsPausing", result);
     },
   },
   modules: {},

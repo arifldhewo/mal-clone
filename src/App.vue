@@ -1,8 +1,18 @@
 <template>
   <div id="app" class="lg:mx-10">
+    <audio id="audio" src="@/assets/bg-music.mp3"></audio>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  playAudio() {
+    const audio = document.getElementById("audio");
+    audio.play();
+  },
+};
+</script>
 
 <style>
 #app {
